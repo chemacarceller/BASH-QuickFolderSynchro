@@ -177,9 +177,9 @@ for j in `echo "$2/*"`; do
 		# The file exists in Source
 		btargetFileExistInSource=true
 		#if [ -d "$j" ]; then
-			#echo "$1 --> DIRECTORY FOUND: $j EXISTS IN SOURCE, NOTHING IS DONE" | tee -a QuickFolderSynchro.log
+			#echo "DIRECTORY FOUND: $j EXISTS IN SOURCE, NOTHING IS DONE" | tee -a QuickFolderSynchro.log
 		#else
-			#echo "$1 --> FILE FOUND: $j EXISTS IN SOURCE, NO ACTION IS REQUIRED" | tee -a QuickFolderSynchro.log
+			#echo "FILE FOUND: $j EXISTS IN SOURCE, NO ACTION IS REQUIRED" | tee -a QuickFolderSynchro.log
 		#fi
 	fi
 
@@ -187,10 +187,10 @@ for j in `echo "$2/*"`; do
 	if [ $btargetFileExistInSource = "false" ]; then
 		targetDeletedFilesAndDir=$(( targetDeletedFilesAndDir + 1  ));
 		if [ -d "$j" ]; then
-			echo "$1 --> DIRECTORY FOUND: $j DOES NOT EXIST IN SOURCE, IT IS DELETED" | tee -a QuickFolderSynchro.log
+			echo "DIRECTORY FOUND: $j DOES NOT EXIST IN SOURCE, IT IS DELETED" | tee -a QuickFolderSynchro.log
 			targetFoundDirNotInSource=$(( targetFoundDirNotInSource + 1  ));
 		else
-			echo "$1 --> FILE FOUND: $j DOES NOT EXIST IN SOURCE, IT IS DELETED" | tee -a QuickFolderSynchro.log
+			echo "FILE FOUND: $j DOES NOT EXIST IN SOURCE, IT IS DELETED" | tee -a QuickFolderSynchro.log
 			targetFoundFilesNotInSource=$(( targetFoundFilesNotInSource + 1  ));
 			
 		fi
