@@ -1,4 +1,4 @@
-# BASH-QuickFolderSynchro
+# Bash-QuickFolderSynchro
 
 A fast folder synchronization utility written in shell bash (linux)
 
